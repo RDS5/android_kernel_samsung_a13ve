@@ -53,9 +53,9 @@ endif
     # export CONFIG_WLAN_DRV_BUILD_IN=y
 
     ifeq ($(CONFIG_WLAN_DRV_BUILD_IN),y)
-        PATH_TO_WMT_DRV      = vendor/mediatek/kernel_modules/connectivity/common
-        PATH_TO_WLAN_CHR_DRV = vendor/mediatek/kernel_modules/connectivity/wlan/adaptor
-        PATH_TO_WLAN_DRV     = vendor/mediatek/kernel_modules/connectivity/wlan/core/gen4m
+        PATH_TO_WMT_DRV      = $(srctree)/drivers/misc/mediatek/connectivity/common
+        PATH_TO_WLAN_CHR_DRV = $(srctree)/drivers/misc/mediatek/connectivity/wlan/adaptor
+        PATH_TO_WLAN_DRV     = $(srctree)/drivers/misc/mediatek/connectivity/wlan/core/gen4m
 
         ABS_PATH_TO_WMT_DRV      = $(srctree)/../$(PATH_TO_WMT_DRV)
         ABS_PATH_TO_WLAN_CHR_DRV = $(srctree)/../$(PATH_TO_WLAN_CHR_DRV)
